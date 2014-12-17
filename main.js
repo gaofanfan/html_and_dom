@@ -6,6 +6,7 @@ function scores() {
   grade += judge() ;
   grade += question() ;
   document.getElementById('count').value = grade;
+
 }
 
 function filling() {
