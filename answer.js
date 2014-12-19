@@ -8,5 +8,7 @@ Answer.getstandardAnswer = function () {
     new Choice('2_1_1', 'B', 10),
     new Choice('2_2_1', 'A', 10),
     new MultipleChoice('3_1', ['A','B','D'], 10),
-    new MultipleChoice('3_2', ['A','B','C'], 10)];
+    new MultipleChoice('3_2', ['A','B','C'], 10),
+    new Judge('4_1', 'N', 10),
+    new Judge('4_2', 'Y', 10)];
 };

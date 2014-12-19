@@ -12,10 +12,6 @@ function printScore() {
     return false;
   }
 
-//   var multipleChoiceScore = getMultipleChoiceScore('3_1','A,B,D') + getMultipleChoiceScore('3_2','A,B,C');
-//
-//   var judgeScore = getJudgeScore('4_1','N') + getJudgeScore('4_2','Y');
-//
 //   var questionScore = getQuestionScore('5_1','模型是对现实世界的简化和抽象，模型是对所研究的系统过程、' +
 //     '事物或概念的一种表达形式。可以是物理实体；可以是某种图形或者是一种数学表达式。');
 //
