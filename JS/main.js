@@ -12,28 +12,7 @@ function printScore() {
     return false;
   }
 
-//   var questionScore = getQuestionScore('5_1','模型是对现实世界的简化和抽象，模型是对所研究的系统过程、' +
-//     '事物或概念的一种表达形式。可以是物理实体；可以是某种图形或者是一种数学表达式。');
-//
-//   score =  fillScore + choiceScore + multipleChoiceScore +
-//     judgeScore + questionScore;
-//   document.getElementById('count').value = score;
-// }
-//
 
-
-//
-// function getJudgeScore(name,answer) {
-//   var score = 0;
-//   var judge = document.getElementsByName(name);
-//   for (var i = 0;i < judge.length;i++) {
-//     if (judge[i].checked  === true && judge[i].value ===  answer) {
-//       score += 10;
-//     }
-//   }
-//   return score;
-// }
-//
 // function getQuestionScore(id,answer) {
 //   var questions = document.getElementById(id);
 //   return questions.value === answer ? 10 :0;
