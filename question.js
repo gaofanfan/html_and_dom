@@ -1,12 +1,12 @@
-function Question(name, rightAnswer, scorce){
-  this.name = name;
-  this.rightAnswer = rightAnswer;
-  this.scorce = scorce;
+function Question(tipicName, standardAnswer, score){
+  this.tipicName = tipicName;
+  this.standardAnswer = standardAnswer;
+  this.score = score;
 }
 Question.all = function(){
-  return Answers.getrightAnswer();
+  return Answers.getstandardAnswer();
 };
 
-Question.prototype.countScorce = function () {
+Question.prototype.countScore = function () {
 
 };

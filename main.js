@@ -1,13 +1,13 @@
-function printScorce() {
-    var scorce = 0;
+function printScore() {
+    var score = 0;
     var questions = Question.all();
 
     _.forEach(questions, function(question){
-      var anwser = document.getElementsByName(question.name);
-      scorce += question.countScorce(anwser);
+      var anwser = document.getElementsByName(question.tipicName);
+      score += question.countScore(anwser);
     });
 
-    document.getElementById('count').value = scorce;
+    document.getElementById('count').value = score;
 
     return false;
   }
