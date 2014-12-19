@@ -1,8 +1,11 @@
 <!DOCTYPE html>
  <html>
- <head>
+  <head lang="zh-CN">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
    <script type="text/javascript" src="lib/lodash-2.4.1/lodash.compat.js"></script>
+   <script type="text/javascript" src="lib/jquery-2.1.3.js"></script>
    <script src="JS/model/question.js" type="text/javascript"></script>
    <script src="JS/model/answer.js" type="text/javascript"></script>
    <script src="JS/main.js" type="text/javascript"></script>
@@ -11,51 +14,63 @@
    <script src="JS/model/multiple-choice.js" type="text/javascript"></script>
    <script src="JS/model/judge.js" type="text/javascript"></script>
    <script src="JS/model/short-answer.js" type="text/javascript"></script>
+
+   <link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
   <title>test-paper</title>
- </head>
- <body>
-  <h1>
-  <p align="center" > <b>统一建模语言理论测试</b>
-  </p>
-  </h1>
-  <hr/>
+  </head>
+  <body>
+    <div class="panel panel-default">
+      <form action="" method="post" autocomplete="off">
+        <header>
+          <div class="panel panel-default text-center">
+            <div class="text-center"style="background-color:rgb(248,248,248)">
+              <h1><b >统一建模语言理论测试</b></p></h1>
+              <hr />
+            </div>
+            <div>
+                <p> 考试科目：<u>统一建模语言 UML</u>
+                    时间：<u>100分钟</u>
+                    得分：<u><span id="count"></span></u>
+                </p>
+              </div>
+            <div>
+              <div class="text-dange">
+                  班级：<label for="class"></label>
+                  <input type="text" id="class"/>
+                  学号：<label for="id"></label>
+                  <input type="text" id="id"/>
+                  姓名：<label for="name"></label>
+                  <input type="text" id="name"/>
+              </div>
+            </div>
+          </div>
+        </header>
+      </form>
 
-  <form>
-  <header>
-  <section>
-  <p align="center" >
-    考试科目：<b>统一建模语言 UML</b>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    时间：100分钟
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    得分：<input type="text" id="count" >
-  </p>
-  <p align="center" >
-    班级：<input type="text" id="class"/>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    学号：<input type="text" id="id"/>
-      &nbsp;
-    姓名：<input type="text" id="name"/>
-  </p><hr/>
-  </section>
-  </header>
-
-  <section>
-    <h3>一、填空题 </h3>
-      <ol>
-        <li>
-          <label for="1_1">UML 的中文全称是：</label>
-          <input type="text" id="1_1" name="1_1" size="12px"/>
-        </li>
-        <li>
-          <label for="2_1">对象最突出的特征是：</label>
-          <input type="text" id="2_1" name="1_2"size="12px">
-          <input type="text" id="2_2" name="1_2"size="12px">
-          <input type="text" id="2_3" name="1_2"size="12px">
-        </li>
-      </ol>
-  <section>
-    <h3>二、选择题</h3>
+    <div class="panel panel-default form-group ">
+      <div class="panel panel-default form-group" style="background-color:rgb(248,248,248)">
+        <h3 >一、填空题 <small>(第1小题10分，第2小题每空5分)</small></h3>
+          </div>
+            <ol>
+              <li>
+                <div>
+                  <label for="1_1">UML 的中文全称是：</label>
+                  <input type="text" id="1_1" name="1_1" size="12px"/>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <label for="2_1">对象最突出的特征是：</label>
+                  <input type="text" id="2_1" name="1_2"size="12px">
+                  <input type="text" id="2_2" name="1_2"size="12px">
+                  <input type="text" id="2_3" name="1_2"size="12px">
+                </div>
+              </li>
+            </ol>
+    <div class="panel panel-default form-group">
+      <div class="panel panel-default form-group" style="background-color:rgb(248,248,248)">
+      <h3>二、选择题<small>(每小题10分)</samll></h3>
+      </div>
       <ol>
         <li>UML 与软件工程的关系是：<br/>
           <input type="radio" id="2_1_1" name="2_1_1" value="A" />
@@ -78,10 +93,12 @@
           <label for="2_2_4">（D）单继承和多继承都不支持</label><br />
         </li>
       </ol>
-  </section>
-  <section>
-    <h3>三、多选题</h3>
-      <ol>
+    </div>
+    <div class="panel panel-default form-group">
+      <div class="panel panel-default form-group"style="background-color:rgb(248,248,248)">
+        <h3>三、多选题<small>(每小题10分)</small></h3>
+      </div>
+        <ol>
         <li>用例的粒度分为以下哪三种。<br />
           <input type="checkbox" id="3_1_1"name="3_1" value="A"/>
           <label for="3_1_1">（A）概述级、</label><br/>
@@ -103,36 +120,47 @@
             <label for="3_2_4">（D）方法（Function）</label><br />
         </li>
       </ol>
-  </section>
-  <section>
-    <h3>四、判断题</h3>
+    </div>
+    <div class="panel panel-default form-group ">
+      <div class="panel panel-default form-group"style="background-color:rgb(248,248,248)">
+        <h3>四、判断题<small>(每小题10分)</small></h3>
+      </div>
       <ol>
         <li>用例图只是用于和客户交流和沟通的，用于确定需求。
-          <input type="radio" id="4_1_1"name="4_1" value="Y" />
-          <label for="4_1_1">YES</label>
-          <input type="radio" id="4_1_2"name="4_1" value="N" />
-          <label for="4_1_2">NO</label>
-          <br />
+          <div>
+            <input type="radio" id="4_1_1"name="4_1" value="Y" />
+            <label for="4_1_1">YES</label>
+          </div>
+          <div>
+            <input type="radio" id="4_1_2"name="4_1" value="N" />
+            <label for="4_2_2">NO</label>
+          </div>
         </li>
         <li>在状态图中，终止状态在一个状态图中允许有任意多个。
-          <input type="radio" id="4_2_1"name="4_2" value="Y" />
-          <label for="4_2_1">YES</label>
-          <input type="radio" id="4_2_2"name="4_2" value="N" />
-          <label for="4_2_2">NO</label>
+          <div>
+            <input type="radio" id="4_2_1"name="4_2" value="Y" />
+            <label for="4_2_1">YES</label>
+          </div>
+          <div>
+            <input type="radio" id="4_2_2"name="4_2" value="N" />
+            <label for="4_1_2">NO</label>
+          </div>
           <br />
         </li>
       </ol>
-  </section>
-  <section>
-    <h3>五、答题</h3>
+    </div>
+      <div class="panel panel-default form-group"style="background-color:rgb(248,248,248)">
+        <h3>五、简答题<small>(每小题15分)</small></h3>
+      </div>
       <ol>
         <li>
           <label for="5_1">简述什么是模型以及模型的表现形式?</label></br>
           <textarea rows = "5" cols = "40" id ="5_1" name="5_1" ></textarea>
         </li>
       </ol>
-          <input type="button" value="提交"onclick=" printScore();"/>
-  </section>
-  </form>
+    <div  class="btn-lg">
+      <input type="button" value="提交"onclick=" printScore();"/>
+    </div>
+  </div>
  </body>
 </html>

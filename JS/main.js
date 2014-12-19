@@ -26,9 +26,8 @@ function printScore() {
       return false;
     }
 
-    document.getElementById('count').value = score;
-
-    return false;
+    document.getElementById('count').innerText = score;
+      return false;
   }
 
 function requiredInput(inputs) {
