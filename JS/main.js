@@ -7,23 +7,40 @@ function printScore() {
       score += question.countScore(anwser);
     });
 
+    var requiredInputs = [
+    {
+      id: 'class',
+      text: '班级'
+    },
+    {
+      id: 'id',
+      text: '学号'
+    },
+    {
+      id: 'name',
+      text: '姓名'
+    }
+    ];
+
+    if (requiredInput(requiredInputs)) {
+      return false;
+    }
+
     document.getElementById('count').value = score;
 
     return false;
   }
 
+function requiredInput(inputs) {
 
-// function getQuestionScore(id,answer) {
-//   var questions = document.getElementById(id);
-//   return questions.value === answer ? 10 :0;
-// }
-//
-// function judgeNull() {
-//   var personName = document.getElementById("name").value;
-//   var personId = document.getElementById("id").value;
-//   var personClass = document.getElementById("class").value;
-//
-//   if (personName === "" || personId === "" || personClass ==="") {
-//     alert("请输入个人信息！");
-//   }
-// }
+  for (var i = 0; i < inputs.length; i++) {
+    var input = inputs[i];
+    var element = document.getElementById(input.id);
+    if (element && _.isEmpty(element.value)) {
+      alert('请输入您的：' + input.text + '！');
+      return true;
+    }
+  }
+
+  return false;
+}
