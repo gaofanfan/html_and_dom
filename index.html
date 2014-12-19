@@ -33,16 +33,16 @@
                     得分：<u><span id="count"></span></u>
                 </p>
               </div>
-            <div>
               <div class="text-dange">
-                  班级：<label for="class"></label>
-                  <input type="text" id="class"/>
-                  学号：<label for="id"></label>
-                  <input type="text" id="id"/>
-                  姓名：<label for="name"></label>
-                  <input type="text" id="name"/>
+                  班级(*)：<label for="class"></label>
+                  <input type="text" style="border-color:#C6E2FF;"id="class"/>
+                  学号(*)：<label for="id"></label>
+                  <input type="text" style="border-color:#C6E2FF;" id="id"/>
+                  姓名(*)：<label for="name"></label>
+                  <input type="text" style="border-color:#C6E2FF;" id="name"/>
+                  <div style="color:#F00"><b>(带*为必填项)</b>
+                  </div>
               </div>
-            </div>
           </div>
         </header>
       </form>
@@ -125,40 +125,41 @@
       <div class="panel panel-default form-group"style="background-color:rgb(248,248,248)">
         <h3>四、判断题<small>(每小题10分)</small></h3>
       </div>
-      <ol>
-        <li>用例图只是用于和客户交流和沟通的，用于确定需求。
-          <div>
-            <input type="radio" id="4_1_1"name="4_1" value="Y" />
-            <label for="4_1_1">YES</label>
-          </div>
-          <div>
-            <input type="radio" id="4_1_2"name="4_1" value="N" />
-            <label for="4_2_2">NO</label>
-          </div>
-        </li>
-        <li>在状态图中，终止状态在一个状态图中允许有任意多个。
-          <div>
-            <input type="radio" id="4_2_1"name="4_2" value="Y" />
-            <label for="4_2_1">YES</label>
-          </div>
-          <div>
-            <input type="radio" id="4_2_2"name="4_2" value="N" />
-            <label for="4_1_2">NO</label>
-          </div>
-          <br />
-        </li>
+        <ol>
+          <li>用例图只是用于和客户交流和沟通的，用于确定需求。
+            <div>
+              <input type="radio" id="4_1_1"name="4_1" value="Y" />
+              <label for="4_1_1">YES</label>
+            </div>
+            <div>
+              <input type="radio" id="4_1_2"name="4_1" value="N" />
+              <label for="4_2_2">NO</label>
+            </div>
+          </li>
+          <li>在状态图中，终止状态在一个状态图中允许有任意多个。
+            <div>
+              <input type="radio" id="4_2_1"name="4_2" value="Y" />
+              <label for="4_2_1">YES</label>
+            </div>
+            <div>
+              <input type="radio" id="4_2_2"name="4_2" value="N" />
+              <label for="4_1_2">NO</label>
+            </div>
+            <br />
+          </li>
       </ol>
     </div>
-      <div class="panel panel-default form-group"style="background-color:rgb(248,248,248)">
+    <div class="panel panel-default form-group"style="background-color:rgb(248,248,248)">
         <h3>五、简答题<small>(每小题15分)</small></h3>
-      </div>
+    </div>
       <ol>
         <li>
           <label for="5_1">简述什么是模型以及模型的表现形式?</label></br>
           <textarea rows = "5" cols = "40" id ="5_1" name="5_1" ></textarea>
         </li>
       </ol>
-    <div  class="btn-lg">
+    <div  class="btn-lg glyphicon glyphicon-user">
+      <span ></span>
       <input type="button" value="提交"onclick=" printScore();"/>
     </div>
   </div>
